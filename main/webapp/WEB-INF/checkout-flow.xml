@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+      https://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+      
+      <var name="card" class="com.niit.shoppingcartbe.model.Card" />
+       <var name="checkoutHandler" class="com.niit.shoppingcartfe.handler.CheckoutHandler" />
+      
+      <view-state id="paymentpage" view="Payment" model="card">
+      <transition on="submit" to="payment"></transition>
+      </view-state>
+      
+      
+      <action-state id="payment">
+      <evaluate expression="checkoutHandler.paymentMethod(card)" />
+      <transition on="cod" to="confpage" />
+      <transition on="card" to="cardpage"/>
+      </action-state>
+      
+      <view-state id="cardpage" view="Card" model="card">
+            <transition on="submit1" to="confpage"></transition>
+      </view-state>
+      
+       <action-state id="cardpayment">
+      <evaluate expression="checkoutHandler.cardPayment()" />
+      <transition on="true" to="confpage" />
+      <transition on="false" to="paymentpage"/>
+      </action-state>
+      
+        <view-state id="confpage" view="Confirmation"></view-state>
+               
+      </flow>

@@ -1,0 +1,75 @@
+html,
+body {
+/*css for full size background image*/
+  background: url("lol.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-color: #060;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  padding: 10px;
+ 
+}
+#heading{
+	color: #f8f8f8;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+.link{
+	font-size: 18px;
+	margin-left: 40px;
+}
+
+.middle-section{
+	margin-left: 40px;
+	color: #5c4236;
+}
+
+
+.table-class{
+	color: #5c4236;
+}
+
+
+#table {
+	margin-left: 40px;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+#table th{
+    text-align: center;
+    padding: 8px;
+    font-size: 130%;
+}
+
+#table-row td{
+	text-align: center;
+	padding: 5px;
+	border-bottom: 1px solid #5c4236;
+}
+
+#table-row:hover{
+	background: rgba(255, 236, 178, 0.4);
+}
+
+#table-row th {
+    background-color: #5c4236;
+    color: white;
+}
+
+#border-right{
+	border-right: 1px solid #5c4236;
+}
+
+#row-hover:hover{
+	background: rgba(255, 236, 178, 0.4);
+}
